@@ -14,7 +14,6 @@ class Index extends React.Component {
                                           return (
                                                  <li>
                                                         {pokemon.name} <br></br>
-
                                                  </li>
                                           );
                                    })}
