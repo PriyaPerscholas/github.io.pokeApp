@@ -9,6 +9,16 @@ class Index extends React.Component {
               return (
                      <div>
                             <h1>'See All The Pokemon!'</h1>
+                            <ul>
+                                   {pokemon.map((pokemon, i) => {
+                                          return (
+                                                 <li>
+                                                        {pokemon.name} <br></br>
+
+                                                 </li>
+                                          );
+                                   })}
+                            </ul>
                      </div>
               )
        }
