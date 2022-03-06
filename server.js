@@ -26,7 +26,7 @@ app.get('/pokemon', function (req, res) {
        res.render('Index', { pokemon: pokemon });
 });
 
-//define route which displays id
+//define another route which displays id
 app.get('/pokemon/:id', function (req, res) {
        res.send(pokemon[req.params.id])
 })
