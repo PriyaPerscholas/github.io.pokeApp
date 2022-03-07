@@ -7,6 +7,14 @@ const app = express();
 // declaring a variable for database in models
 const pokemon = require('./models/pokemon.js')
 
+//Must be first
+//middleware
+app.use((req, res, next) => {
+       console.log('I run for all routes')
+       next()
+})
+app.use(express.urlencoded())
+
 //set up view engine
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
@@ -27,9 +35,16 @@ app.get('/pokemon', function (req, res) {
 });
 
 //define another route which displays id
-app.get('/pokemon/:id', function (req, res) {
-       res.send(pokemon[req.params.id])
+// app.get('/pokemon/:id', function (req, res) {
+//        res.send(pokemon[req.params.id])
+// })
+
+app.get('/pokemon/:id', (req, res) => {
+       res.render('Show', {
+              pokemon: pokemon[req.params.id]
+       })
 })
+
 
 //tell the app to listen on port 3000
 app.listen(3000, function () {
