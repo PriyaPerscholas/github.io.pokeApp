@@ -19,7 +19,7 @@ touch models/pokemon.js
 touch server.js
 touch .gitignore
 npm init -y
-  Commit:
+  🔴 Commit:
 "All my files are created"
 
 Install NPM packages
@@ -29,7 +29,7 @@ npm i express
 npm i express-react-views react@16 react-dom@16
 check your package.json
 Approximate package.json
- Commit:
+ 🔴 Commit:
 "All my npm packages are added"
 
 Set up your server
@@ -45,7 +45,7 @@ GOTCHA! : nodemon will only work if you run it from the same location as your pa
 In the browser
 go to localhost:3000
 check that you have your Welcome to the Pokemon App! message displaying.
-  Commit:
+  🔴 Commit:
 "My server is set up and running"
 
 Set up your 'database'
@@ -63,7 +63,8 @@ const pokemon = [
 Set up your 'database' so that it can be exported to your server.js and then be required by your server.js
 Set this 'database' to a variable called pokemon in your server.js file
 Create a get route /pokemon that will res.send(pokemon), which will display your pokemon data as json in the browser.
-  Commit:
+
+🔴 Commit:
 "Connected my database, can see json in the browser"
 
 Set up your index view
@@ -72,52 +73,42 @@ Instead of displaying json at your /pokemon route, you should serve the Index.js
 You will have to set up your jsx file
 
 Start with your html boilerplate code
-Add an <h1> that describes this page, i.e. 'See All The Pokemon!'
-Try adding some inline styles:
 
-We can add inline CSS, which are specified as attributes and are passed to the elements. These are specified as an object with a key as camelCased style name & value being the actual style value (and not as a string).
-
-  class Index extends React.Component {
-     render(){
-         const myStyle = {
-         color: '#ffffff',
-         backgroundColor: '#000000',
-          };     
-         return (
-           <div style={myStyle}>My First React Component!</div>;
-           )   
-      }
-}
 Change your /pokemon route to res.render your Index.jsx file
 
-In your browser, go to localhost:3000/pokemon and be sure to see your Index.jsx view with an h1 tag.
-Commit:
+In your browser, go to localhost:3000/pokemon and be sure to see your Index.jsx view with an h1 tag
+
+🔴 Commit:
 "index.jsx view rendered at pokemon route"
+
 
 Set up your index view to show your pokemon data
 Continue working on your Index.jsx view so that you can see:
 The name of each pokemon, as a list item, inside an unordered list
 This list should be dynamically rendered by jsx based on your data from your 'database'
 You'll notice the pokemon names aren't properly capitalized! Let's fix that! Manipulate the data programatically to capitalize the first letter of their names
-Commit:
+ 
+🔴 Commit:
 "I can view a list of all my pokemon in the browser"
-
-Setting up your show route
+ 
+ Setting up your show route
 Inside your server.js, add a new get route /pokemon/:id
 That will res.send(req.params.id);
 So, when you go to localhost:3000/pokemon/whatever
 whatever will show up in the browser
-Commit:
+
+🔴 Commit:
 "Show view shows req.params.id "
- 
- Link your Index.jsx to your Show.jsx
+
+Link your Index.jsx to your Show.jsx
 Inside your Index.jsx,
 For each pokemon, add an <a> tag that will have an href that goes to the route /pokemon/x, where x is the array position of the pokemon in the data array. This should be set dynamically with jsx
 When you click the link you should go to your show route and the index number corresponding to the pokemon's array position should be displayed
- Commit:
+ 
+  🔴 Commit:
 "Added dynamic anchor tags to index.jsx "
-
-Render your individual pokemon in the show view
+  
+  Render your individual pokemon in the show view
 Copy/paste your code from your Index.jsx into your Sshow.jsx`
 Change all your html code inside your Show.jsx file so that
 Your h1 tag says "Gotta Catch 'Em All"
@@ -126,10 +117,8 @@ Add an image tag that will display an image of the pokemon
 Add an anchor tag with the text of back, that will take you back to your Index.jsx view
 Update the route in the server.js to render the show view with the pokemon data
 Oh no! The image is broken because in our database the image links don't have the .jpg ending, let's fix that programatically! Without going back to the database and editing it there, add on .jpg to the end of the pokemon's image data
- 
- Commit:
+ 🔴 Commit:
 "Created show views of each pokemon"
-
 
  
  
