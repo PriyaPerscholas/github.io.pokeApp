@@ -3,18 +3,18 @@ class Show extends React.Component {
        render() {
               const { pokemon } = this.props;
               return (
-
-                     // <head>
-
-                     //        <title>Pokemon</title>
-                     // </head>
-                     <body>
-                            <h1>'Gotta Catch 'Em All'</h1>
-                            <h2> Pokemon Name</h2>
-                            <img src={`${pokemon.img}.jpg`}></img>
-                            <a href='/pokemon'>Back</a>
-                     </body>
-
+                     <html>
+                            <head>
+                                   <title>Pokemon</title>
+                            </head>
+                            <body style={{ backgroundColor: 'lightcoral' }}>
+                                   <h1 style={{ fontSize: 'Xxlarge' }}>'Gotta Catch 'Em All'</h1>
+                                   <h2>{pokemon.name}</h2>
+                                   <img src={`${pokemon.img}.jpg`}></img>
+                                   <br></br>
+                                   <a href='/pokemon'>Back</a>
+                            </body>
+                     </html>
               )
        }
 }
