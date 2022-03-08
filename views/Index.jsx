@@ -2,17 +2,15 @@ const React = require('react')
 const myStyle = {
        color: 'black',
        backgroundColor: 'lightcoral',
-       //width: '100%',
-
+       minheight: '100vh',
+       maxwidth: '400px',
+       margin: 0,
 
 }
-//
-// function capitalizeFirstLetter(str) {
-//        return str.charAt(0).toUpperCase() + str.slice(1);
-// }
-//capitalizeFirstLetter(string);
+
 class Index extends React.Component {
        render() {
+
               const { pokemon } = this.props;
               return (
                      <div style={myStyle}>
@@ -21,6 +19,7 @@ class Index extends React.Component {
                             <ul style={{ fontWeight: 'bold' }}>
                                    {pokemon.map((pokemon, i) => {
                                           return (
+
                                                  <li>
                                                         The {' '}
                                                         <a href={`/pokemon/${i}`}>
@@ -37,6 +36,8 @@ class Index extends React.Component {
 }
 
 module.exports = Index;
+
+
 
 
 

@@ -2,6 +2,9 @@ const React = require("react")
 class Show extends React.Component {
        render() {
               const { pokemon } = this.props;
+
+              //const pokemon = pokemon.name.charAt(0).toUpperCase(0) + pokemon.name.slice(i)
+
               return (
                      <html>
                             <head>
