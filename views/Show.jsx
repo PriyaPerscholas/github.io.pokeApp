@@ -12,7 +12,7 @@ class Show extends React.Component {
                             </head>
                             <body style={{ backgroundColor: 'lightcoral' }}>
                                    <h1 style={{ fontSize: 'Xxlarge' }}>'Gotta Catch 'Em All'</h1>
-                                   <h2>{pokemon.name}</h2>
+                                   <h2>{pokemon.name.charAt(0).toUpperCase(0) + pokemon.name.slice(1)}</h2>
                                    <img src={`${pokemon.img}.jpg`}></img>
                                    <br></br>
                                    <a href='/pokemon'>Back</a>

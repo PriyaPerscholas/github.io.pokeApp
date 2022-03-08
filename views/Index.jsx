@@ -19,11 +19,9 @@ class Index extends React.Component {
                             <ul style={{ fontWeight: 'bold' }}>
                                    {pokemon.map((pokemon, i) => {
                                           return (
-
                                                  <li>
-                                                        The {' '}
                                                         <a href={`/pokemon/${i}`}>
-                                                               {pokemon.name}
+                                                               <h2>{pokemon.name.charAt(0).toUpperCase(0) + pokemon.name.slice(i)}</h2>
                                                                <br></br>
                                                         </a>
                                                  </li>
